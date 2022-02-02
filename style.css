@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    background-color: black;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: black !important;
+    flex-direction: row;
+    font-size: 15px;
+    padding: 0 14.3% 0 14.3%;
+}
+
+header{
+    width: 23.3%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0 15px 0 0;
+    border-right: 1px solid #2f3336;
+}
+div .logo_header{
+    padding: 5px 5px 5px 58px;
+    cursor: pointer;
+}
+div .logo_header > div > svg{
+    height: 3rem;
+    fill: #d9d9d9;
+    background-color: transparent;
+}
+div .logo_header div:hover{
+    background-color: rgb(29, 155, 240, 0.1);
+    border-radius: 60px;
+    width: fit-content;
+}
+div .logo_header div{
+    padding: 10px 10px 5px 10px;
+}
+div .center_header{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding-left: 55px;
+}
+div .center_header div{
+    display: flex;
+    padding: 15px 25px 18px 10px;
+    cursor: pointer;
+    width: fit-content;
+}
+div .center_header div:hover{
+    background-color: rgb(217, 217, 217, 0.1);
+    border-radius: 30px;
+}
+div .center_header div svg{
+    height: 2.7rem;
+    padding: 0 22px 0 0;
+    fill: #d9d9d9;
+    background-color: transparent;
+}
+div .center_header div span{
+    font-size: 19px;
+    font-weight: 100;
+    color: #d9d9d9;
+    background-color: transparent;
+}
+div .center_header div span > b{
+    background-color: transparent;
+}
+div .tweet{
+    padding:0;
+    background-color: rgb(29, 155, 240);
+    border-radius: 40px;
+    margin: 10px 22px 0 55px;
+    cursor: pointer;
+}
+div .tweet:hover{
+    background-color: rgb(23, 139, 216);
+}
+div .tweet p{
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    padding: 14px 0;
+}
+div .header_username{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0 25px 50px;
+    padding: 10px 8px 5px 8px;
+    bottom: 0;
+    position: absolute;
+    width: inherit;
+}
+div .header_username:hover{
+    background-color: rgb(217, 217, 217, 0.1);
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+div .user_more svg{
+    height: 2rem;
+    fill: #d9d9d9;
+    background-color: transparent;
+}
+div .user_more{
+    padding: 10px 0 0 50px;
+    background-color: transparent;
+}
+
+div .small_profile_img img{
+    border-radius: 60px;
+    height: 3.9rem;
+    margin-right: 10px;
+}
+div .small_profile_img{
+    background-color: transparent;
+}
+div .username p{
+    line-height: 0.7;
+    font-size: 15.5px;
+    background-color: transparent;
+}
+div .username{
+    background-color: transparent;
+    padding-top: 5px;
+}
+div .username > p:first-child{
+    color: #d9d9d9;
+    font-weight: bold;
+}
+div .username > p:last-child{
+    color: rgb(87, 85, 85);
+    font-size: 14px;
+}
+main{
+    width: 76.7%;
+}
+@media screen and (max-width:1700px){
+    body{
+        padding: 0;
+    }
+
+    div .center_header div{
+        padding: 10px 25px 13px 10px;
+    }
+}
