@@ -1,0 +1,769 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    background-color: black;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: black !important;
+    flex-direction: row;
+    font-size: 15px;
+    padding: 0 0 0 14.4%;
+    overflow: hidden;
+}
+/* Vertical .header Styling */
+header{
+    width: 24%;
+    height: 100vh;
+    padding: 0 15px 0 0;
+    border-right: 1px solid #2f3336;
+    overflow-y: auto;
+}
+div .logo_header{
+    padding: 0 0 0 58px;
+    height: 53px;
+    cursor: pointer;
+}
+div .logo_header > div > svg{
+    height: 3rem;
+    fill: #d9d9d9;
+    background-color: transparent;
+}
+div .logo_header div:hover{
+    background-color: rgb(29, 155, 240, 0.1);
+    border-radius: 60px;
+    width: fit-content;
+}
+div .logo_header div{
+    padding: 10px 10px 5px 10px;
+}
+div .center_header{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding-left: 55px;
+}
+div .center_header div{
+    display: flex;
+    padding: 15px 25px 18px 10px;
+    cursor: pointer;
+    width: fit-content;
+}
+div .center_header div:hover{
+    background-color: rgb(217, 217, 217, 0.1);
+    border-radius: 30px;
+}
+div .center_header div svg{
+    height: 2.7rem;
+    padding: 0 22px 0 0;
+    fill: #d9d9d9;
+    background-color: transparent;
+}
+div .center_header div span{
+    font-size: 19px;
+    font-weight: 100;
+    color: #d9d9d9;
+    background-color: transparent;
+}
+div .center_header div span > b{
+    background-color: transparent;
+}
+/* Tweet Button */
+div .tweet{
+    padding:0;
+    background-color: rgb(29, 155, 240);
+    border-radius: 40px;
+    margin: 10px 22px 0 55px;
+    cursor: pointer;
+    width: 240px;
+}
+div .tweet:hover{
+    background-color: rgb(23, 139, 216);
+}
+div .tweet p{
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    padding: 14px 0;
+}
+div .header_username{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0 25px 50px;
+    padding: 10px 8px 5px 8px;
+    bottom: 0;
+    position: absolute;
+    width: inherit;
+}
+div .header_username:hover{
+    background-color: rgb(217, 217, 217, 0.1);
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+div .user_more svg{
+    height: 2rem;
+    fill: #d9d9d9;
+    background-color: transparent;
+}
+div .user_more{
+    padding: 10px 0 0 50px;
+    background-color: transparent;
+}
+
+div .small_profile_img img{
+    border-radius: 60px;
+    height: 3.9rem;
+    margin-right: 10px;
+}
+div .small_profile_img{
+    background-color: transparent;
+}
+div .username p{
+    line-height: 0.7;
+    font-size: 15.5px;
+    background-color: transparent;
+}
+div .username{
+    background-color: transparent;
+    padding-top: 5px;
+}
+div .username > p:first-child{
+    color: #d9d9d9;
+    font-weight: bold;
+}
+div .username > p:last-child{
+    color: rgb(87, 85, 85);
+    font-size: 14px;
+}
+/* End of Vertical Header Styling */
+
+/* Main Content Styling */
+main{
+    overflow-y: scroll;
+    width: calc(100% - 24%);
+}
+.twitter_home{
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+/* Center content Styling e.g Tweet post and latest Posts */
+div .main_user_profile{
+    width: 590px;
+    border-right: #2f3336 1px solid;
+    padding: 0;
+    margin-top: 53px;
+}
+div .center_main_header{
+    display: flex;
+    flex-direction: row;
+    height: 54px;
+    position: fixed;
+    top: 0;
+    /* width: 74%; */
+    padding: 0 20px 0 15px;
+    z-index: 1;
+}
+div .search_twitter{
+    display: flex;
+    align-items: center;
+    padding: 15px 0 15px 40px;
+}
+/* Center Sticky Top section styling */
+div .home_header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    width: 575px;
+    padding: 10px 0 10px 5px;
+    border-right: #2f3336 1px solid;
+
+}
+div .home_header p{
+    color: #d9d9d9;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: transparent;
+}
+div .star svg{
+    fill: #d9d9d9;
+    height: 2rem;
+    background-color: transparent;
+}
+div .star{
+    padding: 8px;
+    margin-right: 8px;
+}
+div .star:hover{
+    background-color: rgb(217, 217, 217, 0.1);
+    border-radius: 60px;
+}
+/* End of Center Sticky top section */
+
+/* Add New Post Styling */
+div .post_tweet{
+    display: flex;
+    padding: 10px 15px 0 15px;
+}
+div .post_tweet_user{
+    width: 11%;
+    background-color: transparent;
+}
+div .post_tweet_user img{
+    border-radius: 60px;
+    background-color: transparent;
+    cursor: pointer;
+}
+div .post_tweet_user img:hover{
+    opacity: 0.8;
+}
+div .post_tweet_text input{
+    border: none;
+    color: #d9d9d9;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+div .post_tweet_text{
+    border-bottom: 1px #2f3336 solid;
+    width: 100%;
+}
+div .post_tweet_content{
+    width: 88%;
+}
+div .post_tweet_text input:focus{
+    outline: none;
+}
+div .post_privacy svg{
+    fill: rgb(23, 139, 216);
+    height: 1.8rem;
+    padding-right: 5px;
+    background-color: transparent;
+}
+div .post_privacy p{
+    color: rgb(23, 139, 216);
+    font-weight: 600;
+    background-color: transparent;
+}
+div .post_privacy{
+    display: flex;
+    margin-bottom: 8px;
+    padding: 7px 8px 0 8px;
+}
+div .post_privacy:hover{
+    background-color: rgb(29, 155, 240, 0.1);
+    width: fit-content;
+    border-radius: 50px;
+    cursor: pointer;
+}
+div .post_tweet_features{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+div .post_additions svg{
+    height: 2rem;
+    fill: rgb(23, 139, 216);
+    background-color: transparent;
+}
+div .post_additions{
+    padding: 8px 10px 6px 10px;
+}
+div .post_additions:hover{
+    background-color: rgb(29, 155, 240, 0.1);
+    border-radius: 50px;
+    cursor: pointer;
+}
+div .post_tweet_icons .post_additions:last-child{
+    background-color: transparent;
+    cursor: default;
+    opacity: 0.6;
+}
+div .post_tweet_icons{
+    width: 70%;
+    padding-left: 8px;
+    display: flex;
+}
+div .post_tweet_features .tweet_new{
+    width: 17%;
+    background-color: rgb(23, 139, 216);
+    padding: 3px 0 0 0;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 1;
+    height: 35px;
+}
+div .post_tweet_features .tweet_new span{
+    background-color: transparent;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+}
+div .showTweets{
+    background-color: transparent;
+    width: 100%;
+    margin-top: 30px;
+    border-bottom: 1px #2f3336 solid;
+}
+div .tweetSpace{
+    padding-top: 25px;
+}
+/* End of Add New post Section Styling */
+
+/* INDIVIDUAL POST STYLING */
+div .latest_tweets, .latest_posts .newTweets, .latest_tweet{
+    border-bottom: 1px #2f3336 solid;
+}
+div .latest_tweet{
+    display: flex;
+    padding: 5px 15px 15px 15px;
+    cursor: pointer;
+    background-color: transparent;
+}
+div .latest_tweets:hover{
+    cursor: pointer;
+    background-color: rgba(90, 88, 88, 0.1);
+}
+div .user_post_header svg{
+    height: 2rem;
+    fill: white;
+    padding-right: 6px;
+}
+div .user_post_header{
+    display: flex;
+    background-color: transparent;
+}
+div .user_post_header span{
+    padding-right: 5px;
+    font-size: 1.55rem;
+    background-color: transparent;
+}
+div .user_post_header span:first-child{
+    color: #d9d9d9;
+    font-weight: 600;
+}
+div .user_post_header span:first-child:hover{
+    text-decoration: underline;
+}
+div .user_post_header .other_name{
+    color: #656769;
+}
+
+div .user_post_header .other_name:last-child span:hover{
+    text-decoration: underline;
+}
+div .latest_post_content{
+    padding-left: 10px;
+    background-color: transparent;
+    width: 89%;
+}
+div .post_content, .post_content p{
+    background-color: transparent;
+    color: white;
+}
+div .user_details{
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+div .post_more svg{
+    fill: #656769;
+    height: 2.5rem;
+    background-color: transparent;
+    padding: 2px;
+
+}
+div .post_more svg:hover{
+    fill: rgb(23, 139, 216);
+    background-color: rgba(29, 208, 240, 0.1);
+    border-radius: 60px;
+}
+div .post_more{
+    background-color: transparent;
+    padding: 5px;
+}
+div .post_content p a{
+    color: rgb(23, 139, 216);
+}
+div .post_reaction{
+    display: flex;
+    width: 82%;
+    background-color: transparent;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+div .post_reaction .reaction svg{
+    height: 3.5rem;
+    background-color: transparent;
+    fill: #656769;
+    padding: 8px 10px;
+    border-radius: 60px;
+}
+div .post_reaction .reaction p{
+    height: auto;
+    background-color: transparent;
+    font-weight: 13px;
+    padding-top: 8px;
+}
+div .post_reaction .reaction p:hover{
+    color: #656769;
+}
+div .post_reaction .reaction{
+    background-color: transparent;
+    display: inline-flex;
+    color: #656769;
+}
+/* Comment */
+div .post_reaction .reaction:first-child svg:hover{
+    fill: rgb(23, 139, 216);
+    background-color: rgb(29, 155, 240, 0.1);
+}
+div .post_reaction .reaction:first-child:hover{
+    color: rgb(23, 139, 216);
+}
+/* Retweet */
+div .post_reaction .reaction:nth-child(2) svg:hover{
+    fill: rgb(23, 216, 65);
+    background-color: rgba(29, 240, 75, 0.1);
+}
+div .post_reaction .reaction:nth-child(2):hover{
+    color: rgb(23, 216, 65);
+}
+/* Love Tweet */
+div .post_reaction .reaction:nth-child(3) svg:hover{
+    fill: rgb(216, 23, 113);
+    background-color: rgba(240, 29, 177, 0.1);
+}
+div .post_reaction .reaction:nth-child(3):hover{
+    color: rgb(216, 23, 113);
+}
+/* Share Tweet */
+div .post_reaction .reaction:last-child svg:hover{
+    fill: rgb(23, 139, 216);
+    background-color: rgb(29, 155, 240, 0.1);
+}
+div .post_reaction .reaction:last-child:hover{
+    color: rgb(23, 139, 216);
+}
+
+/* Post Images */
+div .post_image img, div .post_video video{
+    border-radius: 15px;
+    width: 100%;
+}
+div .post_video{
+    border-radius: 15px;
+    border: 1px #2f3336 solid;
+}
+div .post_link{
+    border-radius: 15px;
+    border: 1px #2f3336 solid;
+}
+div .post_link:hover{
+    background-color: rgba(82, 86, 88, 0.1);
+}
+div .post_link img{
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+}
+div .link_preview{
+    padding: 10px;
+    border-radius: 0 0 15px 15px;
+    background-color: transparent;
+}
+div .link_preview p:nth-child(2){
+    color: #d9d9d9;
+    margin-bottom: -0.8px;
+    background-color: transparent;
+}
+div .link_preview p:last-child{
+    color: #656769;
+    background-color: transparent;
+}
+div .link_preview p:first-child{
+    color: #656769;
+    margin-bottom: -0.8px;
+    background-color: transparent;
+}
+
+div .also_following{
+    display: flex;
+    background-color: transparent;
+    height: 20px;
+    padding: 5px 15px 15px 15px;
+}
+div .also_following svg{
+    fill: #656769;
+    height: 1.6rem;
+    width: 12%;
+    background-color: transparent;
+}
+div .also_following p{
+    color: #656769;
+    font-size: 12px;
+    background-color: transparent;
+    font-weight: 600;
+}
+div .also_following p:hover{
+    text-decoration: underline;
+}
+
+/* Styling the Right Sidebar */
+div .search_trends{
+    padding-left: 20px;
+}
+/* Styling Search Box */
+div .search_twitter svg{
+    height: 2rem;
+    fill: #656769;
+    position: relative;
+    margin-right: -35px;
+    background-color: transparent;
+}
+div .search_twitter input{
+    border-radius: 22px;
+    border: none;
+    width: 350px;
+    color: white;
+    padding: 12px 8px 12px 45px;
+    background-color: #202327;
+    font-size: 1.4rem;
+}
+div .search_twitter input:focus{
+    outline: none;
+    border: 1px rgb(23, 139, 216) solid;
+    background-color: black;
+}
+
+/* Styling Trending Now */
+div .trends_for_you{
+    margin-top: 74px;
+    width: 100%;
+}
+div .trends{
+    padding-top: 16px;
+    background-color: #15181c;
+    margin-left: 5px;
+    border-radius: 18px;
+    width: 350px;
+}
+div .scroll_trend{
+    height: 100vh;
+    max-height: fit-content;
+}
+div .right_sidebar{
+    height: 100vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -375px;
+    width: 33.3%;
+}
+div .trends_header{
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0 22px 0 18px;
+}
+div .trends_header p{
+    color: #d9d9d9;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+div .trends_header svg{
+    height: 4.2rem;
+    fill: #d9d9d9;
+    background-color: transparent;
+    padding: 10px;
+    margin-top: -3px;
+}
+div .trends_header svg:hover{
+    background-color: rgb(87, 85, 85,0.3);
+    border-radius: 60px;
+    cursor: pointer;
+}
+div .trending_in_sa{
+    background-color: transparent;
+}
+div .trending_in_sa p{
+    line-height: 10px;
+}
+div .trends_body{
+    background-color: transparent;
+}
+div .see_trends{
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+div .see_trends:hover, div .follow_list:hover{
+    background-color: rgba(217, 217, 217, 0.025);
+    cursor: pointer;
+}
+div .see_trends .user_more{
+    height: 30px;
+    padding: 0;
+}
+div .see_trends .user_more svg{
+    fill: #656769;
+    padding: 10px;
+    height: 4rem;
+}
+div .see_trends .user_more svg:hover{
+    fill: rgb(29, 155, 240);
+    background-color: rgba(29, 208, 240, 0.1);
+    border-radius: 60px;
+}
+div .trend_country{
+    background-color: transparent;
+    color: #656769;
+}
+div .trend_posts{
+    background-color: transparent;
+    color: #656769;
+}
+div .trend_tag{
+    background-color: transparent;
+    color: #d9d9d9;
+    font-weight: 600;
+}
+
+div .who_to_follow{
+    padding-top: 22px;
+    background-color: #15181c;
+    margin-top: 20px;
+    margin-left: 5px;
+    border-radius: 18px;
+    width: 350px;
+}
+div .trend_show_more{
+    background-color: transparent;
+    padding: 15px 20px 10px 20px;
+    cursor: pointer;
+}
+div .trend_show_more p{
+    background-color: transparent;
+    color: rgb(23, 139, 216);
+}
+div .trend_show_more:hover{
+    background-color: rgba(217, 217, 217, 0.025);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+/* Styling Who to follow section */
+div .follow_header, div .usernames{
+    background-color: transparent;
+}
+div .follow_header p{
+    background-color: transparent;
+    color: #d9d9d9;
+    font-weight: 600;
+    font-size: 1.8rem;
+    padding-left: 22px;
+}
+div .follow_list{
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+div .user_status{
+    background-color: transparent;
+    display: flex;
+}
+div .usernames p{
+    background-color: transparent;
+}
+div .usernames > p:first-child{
+    color: #d9d9d9;
+    font-size: 1.4rem;
+    margin-bottom: -2px;
+    font-weight: 600;
+}
+div .usernames > p:first-child:hover{
+    text-decoration: underline;
+}
+div .user_status p{
+    color: #656769;
+}
+div .user_status p:last-child{
+    padding: 1px 3px 1px 3px;
+    background-color: #222527;
+    border-radius: 2px;
+    font-size: 1.2rem;
+}
+div .follow_button{
+    background-color: transparent;
+}
+div .follow_button p{
+    background-color: #e9e6e6;
+    padding: 5px 14px;
+    border-radius: 18px;
+    font-weight: 600;
+}
+div .follow_button p:hover{
+    background-color: #d4d1d1;
+}
+div .footer{
+    padding: 10px 22px;
+    width: 350px
+}
+div .sidebar_footer span, .copyright{
+    color: #656769;
+    font-size: 1.3rem;
+    padding-right: 5px;
+}
+div .sidebar_footer span:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width:1700px){
+    body{
+        padding: 0;
+    }
+
+    div .center_header div{
+        padding: 10px 25px 13px 10px;
+    }
+}
+
+.imgUrl{
+    background-color: white;
+    color: black;
+    border: #9acafa solid 1px;
+    padding: 2px 2px 2px 10px;
+    width: 100%;
+    height: 50px;
+    font-size: 2rem;
+}
+.ajs-content, .ajs-commands{
+    background-color: white;
+    border: none;
+
+}
+input[type="file"] {
+    position: absolute;
+    width: 2%;
+    height: 3%;
+    margin-top: -22px;
+    opacity: 0;
+  }
+.imgSvg{
+    pointer-events: none;
+}
+
