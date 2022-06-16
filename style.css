@@ -999,9 +999,10 @@ div .center_main_header{
 }
 input[type="file"] {
     position: absolute;
-    width: 2%;
+    width: 6%;
     height: 3%;
-    margin-top: -22px;
+    margin-top: -32px;
+    margin-left: -5px;
     opacity: 0;
   }
 .imgSvg{
