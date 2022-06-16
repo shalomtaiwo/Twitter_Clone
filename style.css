@@ -970,7 +970,7 @@ div .center_main_header{
 }
 .mobile-tweet-icon{
     display: block !important;
-    position: absolute;
+    position: fixed;
     right: 13% !important;
     bottom: 10%;
 }
