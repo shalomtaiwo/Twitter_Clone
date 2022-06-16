@@ -947,7 +947,7 @@ div .center_main_header{
     z-index: 9995;
 }
 .footer-nav{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100vw;
     height: 56px;
