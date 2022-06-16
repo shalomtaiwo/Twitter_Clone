@@ -1,0 +1,27 @@
+{
+  "devDependencies": {
+    "@types/jest": "^23.3.12",
+    "@types/jquery": "^3.5.14",
+    "@types/uuid": "^8.3.4",
+    "jest": "^23.6.0",
+    "typescript": "^4.2.4"
+  },
+  "scripts": {
+    "test": "tsc -v",
+    "type": "commonjs",
+    "watch": "tsc -w"
+  },
+  "name": "typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "firebase": "^9.6.11",
+    "firebaseui": "^6.0.1",
+    "uuid": "^8.3.2"
+  },
+  "type": "commonjs",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
