@@ -205,6 +205,7 @@ class eventListeners extends tweetPost {
                     this.htmlTweet();
                     this.textPost.value = '';
                     this.tweetImage.value = '';
+                    this.mobilePopup.style.display = 'none';
                 }
                 break;
             }

@@ -927,7 +927,7 @@ div .center_main_header{
     bottom: 0 !important;
     right: 0;
     left: 0;
-    z-index: 99999;
+    z-index: 999999 !important;
     display: none;
 }
 .tweet_new{

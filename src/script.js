@@ -113,6 +113,7 @@ var eventListeners = /** @class */ (function (_super) {
                     _this.htmlTweet();
                     _this.textPost.value = '';
                     _this.tweetImage.value = '';
+                    _this.mobilePopup.style.display = 'none';
                 }
                 break;
             }
