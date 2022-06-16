@@ -12,7 +12,6 @@ body{
     flex-direction: row;
     font-size: 15px;
     padding: 0 0 0 14.4%;
-    overflow: hidden;
 }
 /* Vertical .header Styling */
 header{
@@ -21,6 +20,7 @@ header{
     padding: 0 15px 0 0;
     border-right: 1px solid #2f3336;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 div .logo_header{
     padding: 0 0 0 58px;
@@ -71,6 +71,11 @@ div .center_header div span{
 div .center_header div span > b{
     background-color: transparent;
 }
+.return-to{
+    display: none;
+}
+
+
 /* Tweet Button */
 div .tweet{
     padding:0;
@@ -91,6 +96,11 @@ div .tweet p{
     background-color: transparent;
     padding: 14px 0;
 }
+div .tweet .tablet-nav{
+    display: none;
+}
+
+
 div .header_username{
     display: flex;
     justify-content: space-between;
@@ -143,6 +153,7 @@ div .username > p:last-child{
 }
 /* End of Vertical Header Styling */
 
+
 /* Main Content Styling */
 main{
     overflow-y: scroll;
@@ -166,14 +177,14 @@ div .center_main_header{
     height: 54px;
     position: fixed;
     top: 0;
-    /* width: 74%; */
     padding: 0 20px 0 15px;
     z-index: 1;
+    margin-right: -50px !important;
 }
 div .search_twitter{
     display: flex;
     align-items: center;
-    padding: 15px 0 15px 40px;
+    padding: 15px 30px 15px 40px;
 }
 /* Center Sticky Top section styling */
 div .home_header{
@@ -534,7 +545,7 @@ div .search_twitter svg{
 div .search_twitter input{
     border-radius: 22px;
     border: none;
-    width: 350px;
+    width: 305px;
     color: white;
     padding: 12px 8px 12px 45px;
     background-color: #202327;
@@ -556,7 +567,7 @@ div .trends{
     background-color: #15181c;
     margin-left: 5px;
     border-radius: 18px;
-    width: 350px;
+    max-width: 350px;
 }
 div .scroll_trend{
     height: 100vh;
@@ -646,7 +657,7 @@ div .who_to_follow{
     margin-top: 20px;
     margin-left: 5px;
     border-radius: 18px;
-    width: 350px;
+    max-width: 350px;
 }
 div .trend_show_more{
     background-color: transparent;
@@ -730,8 +741,103 @@ div .sidebar_footer span:hover{
     cursor: pointer;
 }
 
+.mobile-nav-head{
+    display: none !important;
+}
+footer{
+    display: none !important;
+}
+
+/* Responsiveness */
 
 
+@media only screen and (max-width: 1284px) {
+    .desktop-nav{
+        display: none;
+    }
+    header{
+        width: 15%;
+        padding: 0;
+    }
+    div .center_header{
+        padding: 0;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    div .logo_header{
+        display: flex;
+        padding-right: 35px;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    div .tweet{
+        padding: 10px;
+        width: fit-content;
+        margin: 0;
+    }
+    div .tweet-icon{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        align-content: flex-end;
+        padding-right: 35px;
+    }
+    div .tweet .tablet-nav{
+        height: 2em;
+        fill: white;
+        background-color: transparent;
+        display: block;
+    }
+    div .header_username{
+        display: flex;
+        justify-content: flex-end;
+        margin: 75px 0 0 0;
+        padding-right: 30px;
+        bottom: 0;
+        position: relative;
+        width: inherit;
+    }
+    .search_twitter{
+        width: 40%;
+    }
+    .search_twitter input{
+        max-width: 73%;
+        width: 354px !important;
+    }
+    main{
+        width: calc(100% - 15%);
+    }
+}
+@media only screen and (min-width: 1312px) {
+    .search_twitter input{
+        width: 325px !important;
+    }
+}
+@media only screen and (max-width: 1164px) {
+    header{
+        width: 8%;
+        padding-left: 55px;
+        padding-right: 0;
+    }
+    div .logo_header{
+        padding-left: 0;
+    }
+    main{
+        width: calc(100% - 8%);
+    }
+    .search_twitter input{
+        max-width: 81% !important;
+    }
+    div .center_header{
+        padding-right: 35px;
+    }
+    div .center_header div{
+        padding: 10px 8px 13px 0 !important;
+    }
+    div .center_header div svg{
+       padding: 0;
+    }
+}
 @media screen and (max-width:1700px){
     body{
         padding: 0;
@@ -740,6 +846,139 @@ div .sidebar_footer span:hover{
     div .center_header div{
         padding: 10px 25px 13px 10px;
     }
+}
+@media only screen and (max-width: 1004px) {
+    header{
+        width: 23%;
+        padding-left: 65px;
+        padding-right: 0;
+    }
+
+    main{
+        width: calc(100% - 23%);
+    }
+    .search_twitter input{
+        max-width: 81% !important;
+    }
+    .right_sidebar,.search_twitter{
+        display: none !important;
+    }
+}
+@media only screen and (max-width: 851px) {
+    header{
+        width: 13%;
+        padding-left: 65px;
+        padding-right: 0;
+    }
+
+    main{
+        width: calc(100% - 13%);
+}
+}
+@media only screen and (max-width: 692px) {
+    header{
+        width: 10%;
+        padding-left: 65px;
+        padding-right: 20px;
+    }
+
+    main{
+        width: calc(100% - 10%);
+}
+div .center_main_header{
+    width: calc(100% - 13%);
+    padding: 0 15px;
+}
+.home_header{
+    border-right: none !important;
+}
+.post_tweet_user{
+    margin-right: 10px;
+}
+}
+/* End of destop/tablet responsive styling */
+@media only screen and (max-width: 500px){
+    body{
+        flex-direction: column-reverse;
+    }
+    header{
+        display: none !important;
+    }
+    main{
+        width: 100% !important;
+        padding-bottom: 50px;
+}
+.center_main_header{
+    width: 100% !important;
+}
+.home_header .small_profile_img{
+    display: flex;
+    flex-direction: row;
+}
+#submitNewPost{
+    width: 100%;
+    margin-top: 50px;
+}
+.mobile-popup{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 99999;
+    display: none;
+}
+.tweet_new{
+    position: absolute;
+    top: 0.5%;
+    right: 5%;
+}
+.showTweets{
+    margin-top: 8px !important;
+}
+.mobile-nav-head{
+    display: block !important;
+}
+.footer{
+    display: block !important;
+    width: 100%;
+    z-index: 9995;
+}
+.footer-nav{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 56px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer-nav div svg, .return-to svg{
+    fill: rgba(255, 255, 255, 0.678);
+    height: 1.7em;
+}
+.footer-nav div:first-child svg{
+    fill: white;
+}
+.return-to{
+    position: absolute;
+    top: 0.5%;
+    left: 5%;
+    display: block;
+}
+.mobile-tweet-icon{
+    display: block !important;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+}
+.user_post_header span{
+    font-size: 1em !important;
+    padding-right: 0.3px !important;
+}
+.user_post_header{
+    justify-content: center;
+}
 }
 
 .imgUrl{

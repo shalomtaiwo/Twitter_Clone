@@ -46,11 +46,18 @@ class eventListeners extends tweetPost {
     imageData;
     tweetPost;
     imgInput;
+    tweetButton;
+    returnButton;
+    mobilePopup;
+    tweetMobile;
     constructor() {
         super();
         this.textPost = document.querySelector("#textPost");
         this.tweetImage = document.querySelector('.imgUrl');
         this.tweetPosts = document.querySelector('.latest_posts');
+        this.tweetButton = document.querySelector('.tweet_new');
+        this.returnButton =  document.querySelector('.return-to');
+        this.tweetMobile = document.querySelector('.mobile-tweet-icon');
         this.textOnlyTweet()
         this.htmlTweet();
         this.imageEvent();
@@ -71,7 +78,7 @@ class eventListeners extends tweetPost {
                             <div class="latest_post_content">
                                 <div class="user_details">
                                     <div class="user_post_header">
-                                    <span>Shalom Taiwo</span>
+                                    <span>Shalom Taiwo </span>
                                     <span class="other_name">@taiwo_shalom</span>
                                     <span class="other_name"> <b>·</b> <span>${myDate.getHours()}h</span></span>
                                     </div>
@@ -120,7 +127,7 @@ class eventListeners extends tweetPost {
                             
                                 <div class="user_details">
                                     <div class="user_post_header">
-                                    <span>Shalom Taiwo</span>
+                                    <span>Shalom Taiwo </span>
                                     <span class="other_name">@taiwo_shalom</span>
                                     <span class="other_name"> <b>·</b> <span>${myDate.getHours()}h</span></span>
                                     </div>
@@ -173,6 +180,8 @@ class eventListeners extends tweetPost {
     }
 
     submitEvent(){
+        this.mobilePopup = document.querySelector('.mobile-popup');
+        const mainBody = document.querySelector('main');
         document.addEventListener("submit", (e)=>{
             e.preventDefault();
             while (!this.tweetImage.value) {
@@ -184,6 +193,7 @@ class eventListeners extends tweetPost {
                     this.htmlTweet();
                     this.textPost.value = '';
                     this.tweetImage.value = '';
+                    this.mobilePopup.style.display = 'none';
                 }
                 break;
             }
@@ -199,6 +209,14 @@ class eventListeners extends tweetPost {
                 break;
             }
             localStorage.setItem("tweets", JSON.stringify(this.twitter));
+        })
+        this.returnButton.addEventListener('click',(e)=>{
+            this.mobilePopup.style.display = 'none';
+            mainBody.style.overflow = 'scroll';
+        })
+        this.tweetMobile.addEventListener('click',(e)=>{
+            this.mobilePopup.style.display = 'block';
+            mainBody.style.overflow = 'hidden';
         })
         }
 
