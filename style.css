@@ -929,6 +929,8 @@ div .center_main_header{
     left: 0;
     z-index: 999999 !important;
     display: none;
+    height: 100vh !important;
+    overflow: hidden !important;
 }
 .tweet_new{
     position: absolute;
