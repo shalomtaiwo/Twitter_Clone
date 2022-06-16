@@ -132,7 +132,7 @@ class eventListeners extends tweetPost {
                                 <div class="post_content">
                                     <p>${newTweet.postText}</p>
                                     <div class="post_image">
-                                    <img class="getImageLightBox" id="${newTweet.postId}" src="${newTweet.postImage}" onload="var lightBox = document.querySelector('#${newTweet.lightBoxId}');var lightBoxImage = document.querySelector('#${newTweet.postId}');lightBoxImage.addEventListener('click', (event)=>{lightBox.style.display = 'flex';}); const closeLightBox = document.getElementById('${newTweet.closeLightBoxId}'); closeLightBox.addEventListener('click', (event)=>{lightBox.style.display = 'none';});">
+                                    <img class="getImageLightBox" id="${newTweet.postId}" src="${newTweet.postImage}"/>
                                 </div>
                                 </div>
                                 <div class="post_reaction">
