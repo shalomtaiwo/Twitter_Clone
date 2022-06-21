@@ -77,6 +77,7 @@ var eventListeners = /** @class */ (function (_super) {
                 _this.mobilePopup.style.display = 'block';
                 mainBody.style.overflow = 'hidden';
             });
+            this.mobilePopup.style.display = 'none';
         }
     };
     eventListeners.prototype.textOnlyTweet = function () {

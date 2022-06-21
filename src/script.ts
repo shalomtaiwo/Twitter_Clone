@@ -128,6 +128,7 @@ class eventListeners extends tweetPost {
             this.mobilePopup.style.display = 'block';
             mainBody.style.overflow = 'hidden';
         })
+        this.mobilePopup.style.display = 'none';
     }
     }
 
