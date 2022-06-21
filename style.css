@@ -932,6 +932,9 @@ div .center_main_header{
     height: 100vh !important;
     overflow: hidden !important;
 }
+.desktop-popup{
+    display: none;
+}
 .tweet_new{
     position: absolute;
     top: 0.5%;
@@ -1011,3 +1014,17 @@ input[type="file"] {
     pointer-events: none;
 }
 
+.mobile-popup{
+    display: none;
+}
+.emptyPost{
+    display: block;
+    font-style: italic;
+}
+.emptyText h1, .emptyText h2, .emptyText h3, .emptyText p{
+    color: rgba(248, 244, 244, 0.445);
+    text-align: center;
+}
+.emptyPost .latest_tweet{
+    opacity: 0.4;
+}
