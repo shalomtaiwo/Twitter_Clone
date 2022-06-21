@@ -978,6 +978,7 @@ div .center_main_header{
     position: fixed;
     right: 13% !important;
     bottom: 10%;
+    background-color: transparent;
 }
 .user_post_header span{
     font-size: 1em !important;
