@@ -50,6 +50,7 @@ class eventListeners extends tweetPost {
     returnButton;
     mobilePopup;
     tweetMobile;
+    viewportWidth;
     constructor() {
         super();
         this.textPost = document.querySelector("#textPost");
@@ -66,6 +67,7 @@ class eventListeners extends tweetPost {
     }
 
     emptyProfile(){
+        const mainBody = document.querySelector('main');
         if (this.twitter.length === 0){
             this.tweetPosts.innerHTML = `
                 <div class='emptyPost' style="color: white;">
@@ -117,6 +119,16 @@ class eventListeners extends tweetPost {
                         </div>
             `
         }
+        if (this.viewportWidth <= 500){
+        this.returnButton.addEventListener('click',(e)=>{
+            this.mobilePopup.style.display = 'none';
+            mainBody.style.overflow = 'scroll';
+        })
+        this.tweetMobile.addEventListener('click',(e)=>{
+            this.mobilePopup.style.display = 'block';
+            mainBody.style.overflow = 'hidden';
+        })
+    }
     }
 
     textOnlyTweet(){
@@ -234,11 +246,12 @@ class eventListeners extends tweetPost {
     }
 
     submitEvent(){
+        this.viewportWidth = window.innerWidth;
+
         this.mobilePopup = document.querySelector('.mobile-popup');
-        const mainBody = document.querySelector('main');
         document.addEventListener("submit", (e)=>{
             e.preventDefault();
-            while (!this.tweetImage.value) {
+            while (!this.tweetImage.value && this.viewportWidth <= 500) {
                 if (this.textPost.value == ''){
                     this.textPost.setAttribute('required','');
                 }else{
@@ -251,7 +264,20 @@ class eventListeners extends tweetPost {
                 }
                 break;
             }
-            while (this.tweetImage.value != '') {
+            while (!this.tweetImage.value && this.viewportWidth > 500) {
+                if (this.textPost.value == ''){
+                    this.textPost.setAttribute('required','');
+                }else{
+                    this.addNewTweet(this.getPostId(),this.textPost.value,'','','','');
+                    this.textOnlyTweet();
+                    this.htmlTweet();
+                    this.textPost.value = '';
+                    this.tweetImage.value = '';
+                    this.mobilePopup.style.display = 'block';
+                }
+                break;
+            }
+            while (this.tweetImage.value != '' && this.viewportWidth <= 500) {
                 if (this.textPost.value == ''){
                     this.textPost.setAttribute('required','');
                 }else{
@@ -263,16 +289,21 @@ class eventListeners extends tweetPost {
                 }
                 break;
             }
+            while (this.tweetImage.value != '' && this.viewportWidth > 500) {
+                if (this.textPost.value == ''){
+                    this.textPost.setAttribute('required','');
+                }else{
+                    this.addNewTweet(this.getPostId(),this.textPost.value,this.imageData,'','','');
+                    this.htmlTweet();
+                    this.textPost.value = '';
+                    this.tweetImage.value = '';
+                    this.mobilePopup.style.display = 'block';
+                }
+                break;
+            }
             localStorage.setItem("tweets", JSON.stringify(this.twitter));
         })
-        this.returnButton.addEventListener('click',(e)=>{
-            this.mobilePopup.style.display = 'none';
-            mainBody.style.overflow = 'scroll';
-        })
-        this.tweetMobile.addEventListener('click',(e)=>{
-            this.mobilePopup.style.display = 'block';
-            mainBody.style.overflow = 'hidden';
-        })
+    
         }
 
 

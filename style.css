@@ -1028,3 +1028,6 @@ input[type="file"] {
 .emptyPost .latest_tweet{
     opacity: 0.4;
 }
+.desktop-popup{
+    display: block;
+}
