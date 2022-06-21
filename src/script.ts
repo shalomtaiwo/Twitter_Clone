@@ -70,7 +70,7 @@ class eventListeners extends tweetPost {
         const mainBody = document.querySelector('main');
         if (this.twitter.length === 0){
             this.tweetPosts.innerHTML = `
-                <div class='emptyPost' style="color: white;">
+                <div class='emptyPost' style="color: white; overflow: hidden;">
                     <div class="emptyText">
                     <h1>Nothing here</h1>
                     <h2>This sure looks weird<h2>
